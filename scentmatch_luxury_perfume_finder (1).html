@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA Niche - 專屬小眾香水探索與盲買避雷平台</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Serif+TC:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 頁首導覽列 -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">AURA <span>PARFUM</span></a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <nav class="nav-links">
+                <a href="#scenarios">場合情境</a>
+                <a href="#quiz">香氣測驗</a>
+                <a href="#perfumes">嚴選香水</a>
+                <a href="#discovery">試香體驗組</a>
+                <a href="#about">品牌理念</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero 英雄主視覺區域 -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="images/hero.jpg" alt="Aura Perfume Hero Image" class="hero-img">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content container">
+            <span class="hero-subtitle">SCENT DISCOVERY & SELECTION</span>
+            <h1 class="hero-title">找到屬於你的不撞香專屬名片</h1>
+            <p class="hero-description">
+                告別盲買踩雷。我們透過真實場合情境、持香擴香數據與精細香調分析，為您挑選最契合個人風格與場合的小眾沙龍香。
+            </p>
+            <div class="hero-actions">
+                <a href="#quiz" class="btn btn-primary">開啟純 CSS 測驗</a>
+                <a href="#perfumes" class="btn btn-outline">瀏覽精選香水</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 痛點一：按場合情境選香 -->
+    <section id="scenarios" class="section scenarios-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">USAGE SCENARIOS</span>
+                <h2>按場合與季節，精準匹配氣味</h2>
+                <p>不論是需要低調專業的職場氣場，還是令人難忘的約會記憶，選擇最適切的香氣分身。</p>
+            </div>
+
+            <div class="scenarios-grid">
+                <div class="scenario-card">
+                    <div class="card-img-wrapper">
+                        <img src="images/scenario-work.jpg" alt="職場日常香水">
+                    </div>
+                    <div class="card-content">
+                        <h3>職場通勤 · 低調質感</h3>
+                        <p>親膚不刺鼻，清新茶香、乾淨木質與柑橘調，展現專屬專業自信與好印象。</p>
+                        <ul class="tag-list">
+                            <li>#偽體香</li>
+                            <li>#乾淨木質</li>
+                            <li>#白襯衫感</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="scenario-card">
+                    <div class="card-img-wrapper">
+                        <img src="images/scenario-date.jpg" alt="浪漫約會香水">
+                    </div>
+                    <div class="card-content">
+                        <h3>浪漫約會 · 溫柔記憶</h3>
+                        <p>近距離綻放的溫暖奶香、琥珀與柔滑花香，創造專屬於你們的近距離親密記憶。</p>
+                        <ul class="tag-list">
+                            <li>#貼膚香</li>
+                            <li>#柔和花香</li>
+                            <li>#撩人層次</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="scenario-card">
+                    <div class="card-img-wrapper">
+                        <img src="images/scenario-season.jpg" alt="季節限定香水">
+                    </div>
+                    <div class="card-content">
+                        <h3>季節交替 · 氣候調香</h3>
+                        <p>春夏清爽輕盈、降溫解熱；秋冬溫厚包覆、如喀什米爾羊毛般的溫暖擁抱。</p>
+                        <ul class="tag-list">
+                            <li>#冷暖對比</li>
+                            <li>#四季隨心</li>
+                            <li>#沙龍質感</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 痛點二與三：純 CSS 香水尋找器 (Fragrance Finder Quiz Mockup) -->
+    <section id="quiz" class="section quiz-section">
+        <div class="container">
+            <div class="quiz-wrapper">
+                <div class="section-header text-center">
+                    <span class="section-tag">SCENT FINDER QUIZ</span>
+                    <h2>純 CSS 香水速配指標測驗</h2>
+                    <p>點選您的個人偏好，即時查看最推薦的氣味風格類別</p>
+                </div>
+
+                <!-- 純 CSS Tab/Accordion 切換機制 -->
+                <div class="quiz-container">
+                    <input type="radio" name="quiz-step" id="step1" checked>
+                    <input type="radio" name="quiz-step" id="step2">
+                    <input type="radio" name="quiz-step" id="step3">
+
+                    <!-- 步驟導覽列 -->
+                    <div class="quiz-steps-nav">
+                        <label for="step1" class="step-label step1-label">1. 主要場合</label>
+                        <label for="step2" class="step-label step2-label">2. 香氣風格</label>
+                        <label for="step3" class="step-label step3-label">3. 推薦結果</label>
+                    </div>
+
+                    <!-- 步驟一內容 -->
+                    <div class="quiz-content step1-content">
+                        <h3>請問您最常在哪個場合使用這款香水？</h3>
+                        <div class="options-grid">
+                            <label class="option-card">
+                                <input type="radio" name="q1" value="work" checked>
+                                <span class="option-title">辦公室 / 日常通勤</span>
+                                <span class="option-desc">追求自然乾淨、不影響他人的低調質感</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="q1" value="date">
+                                <span class="option-title">私人約會 / 晚宴聚會</span>
+                                <span class="option-desc">展現獨特個人魅力與迷人記憶點</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="q1" value="weekend">
+                                <span class="option-title">週末休閒 / 戶外旅行</span>
+                                <span class="option-desc">放鬆愉悅、隨性不張揚的舒服氣味</span>
+                            </label>
+                        </div>
+                        <div class="quiz-next">
+                            <label for="step2" class="btn btn-primary">下一步：選擇香調風格 &rarr;</label>
+                        </div>
+                    </div>
+
+                    <!-- 步驟二內容 -->
+                    <div class="quiz-content step2-content">
+                        <h3>您希望這款香水帶給人怎樣的感覺？</h3>
+                        <div class="options-grid">
+                            <label class="option-card">
+                                <input type="radio" name="q2" value="woody" checked>
+                                <span class="option-title">沈穩雪松與沉香</span>
+                                <span class="option-desc">溫暖木質，帶給人值得信賴的平靜感</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="q2" value="citrus">
+                                <span class="option-title">清爽佛手柑與佛手茶</span>
+                                <span class="option-desc">充滿活力與通透感的果香茶韻</span>
+                            </label>
+                            <label class="option-card">
+                                <input type="radio" name="q2" value="iris">
+                                <span class="option-title">麂皮與粉紅胡椒</span>
+                                <span class="option-desc">高雅高級的小眾皮革與微辛花香</span>
+                            </label>
+                        </div>
+                        <div class="quiz-next flex-between">
+                            <label for="step1" class="btn btn-outline">&larr; 上一步</label>
+                            <label for="step3" class="btn btn-primary">查看推薦結果 &rarr;</label>
+                        </div>
+                    </div>
+
+                    <!-- 步驟三結果內容 -->
+                    <div class="quiz-content step3-content">
+                        <div class="result-box text-center">
+                            <span class="badge badge-gold">MATCH RATING: 98%</span>
+                            <h3>為您推薦：「寂靜之森 Sylvan Whisper」</h3>
+                            <p>結合乾淨雪松與冷冽白茶，極致低調卻令人難忘。完全符合您的「辦公日常」與「溫暖木質」需求，告別撞香疑慮。</p>
+                            <img src="images/perfume-1.jpg" alt="寂靜之森" class="result-img">
+                            <div class="result-actions">
+                                <a href="#perfumes" class="btn btn-primary">查看此款香水細節</a>
+                                <label for="step1" class="btn btn-outline">重新測驗</label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 痛點二、三、四：香水產品 showcase 卡片（包含持久度、擴香度與不撞香指數） -->
+    <section id="perfumes" class="section perfumes-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-tag">CURATED SELECTION</span>
+                <h2>嚴選小眾質感香水</h2>
+                <p>透明化標示持香表現、擴香氣場與香調演變，不再為「持久度與盲買」迷惘。</p>
+            </div>
+
+            <div class="perfumes-grid">
+
+                <!-- 香水卡片 1 -->
+                <article class="perfume-card">
+                    <div class="perfume-badge-group">
+                        <span class="badge badge-niche">小眾不撞香 95%</span>
+                    </div>
+                    <div class="perfume-img-container">
+                        <img src="images/perfume-1.jpg" alt="寂靜之森 Sylvan Whisper">
+                    </div>
+                    <div class="perfume-details">
+                        <span class="perfume-brand">AURA SIGNATURE</span>
+                        <h3 class="perfume-title">寂靜之森 Sylvan Whisper</h3>
+                        <p class="perfume-type">Eau de Parfum (EDP) / 50ml</p>
+
+                        <!-- 香調前中後調 -->
+                        <div class="notes-pyramid">
+                            <div class="note-item"><strong>前調：</strong>佛手柑、清晨露水、白胡椒</div>
+                            <div class="note-item"><strong>中調：</strong>鼠尾草、白茶、鳶尾花</div>
+                            <div class="note-item"><strong>後調：</strong>大西洋雪松、岩蘭草、淨白琥珀</div>
+                        </div>
+
+                        <!-- 效能指標 (Performance Indicators) -->
+                        <div class="performance-metrics">
+                            <div class="metric-row">
+                                <span class="metric-name">持香時間 (Longevity)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%;"></div>
+                                </div>
+                                <span class="metric-value">7-8 小時</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-name">擴香範圍 (Sillage)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 60%;"></div>
+                                </div>
+                                <span class="metric-value">手臂距離 (貼膚質感)</span>
+                            </div>
+                        </div>
+
+                        <div class="perfume-footer">
+                            <div class="price">NT$ 3,880</div>
+                            <a href="#discovery" class="btn btn-sm btn-outline">先試針管樣品</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 香水卡片 2 -->
+                <article class="perfume-card">
+                    <div class="perfume-badge-group">
+                        <span class="badge badge-niche">獨特調香 92%</span>
+                    </div>
+                    <div class="perfume-img-container">
+                        <img src="images/perfume-2.jpg" alt="午後日光 Velvet Amber">
+                    </div>
+                    <div class="perfume-details">
+                        <span class="perfume-brand">NOIR COLLECTION</span>
+                        <h3 class="perfume-title">琥珀微光 Velvet Amber</h3>
+                        <p class="perfume-type">Extrait de Parfum / 50ml</p>
+
+                        <!-- 香調前中後調 -->
+                        <div class="notes-pyramid">
+                            <div class="note-item"><strong>前調：</strong>粉紅胡椒、苦橙、小豆蔻</div>
+                            <div class="note-item"><strong>中調：</strong>大馬士革玫瑰、朗姆酒、香草</div>
+                            <div class="note-item"><strong>後調：</strong>樹脂琥珀、檀香、零陵香豆</div>
+                        </div>
+
+                        <!-- 效能指標 (Performance Indicators) -->
+                        <div class="performance-metrics">
+                            <div class="metric-row">
+                                <span class="metric-name">持香時間 (Longevity)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 95%;"></div>
+                                </div>
+                                <span class="metric-value">10+ 小時</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-name">擴香範圍 (Sillage)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%;"></div>
+                                </div>
+                                <span class="metric-value">氣場留痕 (高記憶點)</span>
+                            </div>
+                        </div>
+
+                        <div class="perfume-footer">
+                            <div class="price">NT$ 4,500</div>
+                            <a href="#discovery" class="btn btn-sm btn-outline">先試針管樣品</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 香水卡片 3 -->
+                <article class="perfume-card">
+                    <div class="perfume-badge-group">
+                        <span class="badge badge-niche">極致偽體香 98%</span>
+                    </div>
+                    <div class="perfume-img-container">
+                        <img src="images/perfume-3.jpg" alt="純白綿羊 Cloud Suede">
+                    </div>
+                    <div class="perfume-details">
+                        <span class="perfume-brand">ELEMENTAL</span>
+                        <h3 class="perfume-title">晨曦雲絨 Cloud Suede</h3>
+                        <p class="perfume-type">Eau de Toilette (EDT) / 100ml</p>
+
+                        <!-- 香調前中後調 -->
+                        <div class="notes-pyramid">
+                            <div class="note-item"><strong>前調：</strong>橙花、黃葵籽、燕麥</div>
+                            <div class="note-item"><strong>中調：</strong>含羞草、牛奶香、棉花</div>
+                            <div class="note-item"><strong>後調：</strong>白麝香、羊絨木、柔和琥珀</div>
+                        </div>
+
+                        <!-- 效能指標 (Performance Indicators) -->
+                        <div class="performance-metrics">
+                            <div class="metric-row">
+                                <span class="metric-name">持香時間 (Longevity)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 65%;"></div>
+                                </div>
+                                <span class="metric-value">5-6 小時</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-name">擴香範圍 (Sillage)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%;"></div>
+                                </div>
+                                <span class="metric-value">近距離親密香</span>
+                            </div>
+                        </div>
+
+                        <div class="perfume-footer">
+                            <div class="price">NT$ 3,200</div>
+                            <a href="#discovery" class="btn btn-sm btn-outline">先試針管樣品</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 痛點五：Discovery Set 零踩雷試香組 -->
+    <section id="discovery" class="section discovery-section">
+        <div class="container">
+            <div class="discovery-grid">
+                <div class="discovery-img-wrapper">
+                    <img src="images/discovery-set.jpg" alt="Aura Discovery Set 試香禮盒">
+                </div>
+                <div class="discovery-content">
+                    <span class="section-tag">ZERO RISK TRIAL</span>
+                    <h2>探索體驗組：告別盲買踩雷</h2>
+                    <p>
+                        我們深知香水在每個人皮膚上的化學反應（PH值與體溫）皆不相同。透過 5 款 2ml 精緻針管隨身瓶，讓您在真實的生活場域中試用一整天，觀察前中後調的完整演變。
+                    </p>
+
+                    <ul class="benefit-list">
+                        <li>
+                            <span class="benefit-icon">✓</span>
+                            <span><strong>100% 盲買保障：</strong>內附 NT$600 正裝香水折價券。</span>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">✓</span>
+                            <span><strong>自由搭配：</strong>可任選 5 款不同風格沙龍香小樣。</span>
+                        </li>
+                        <li>
+                            <span class="benefit-icon">✓</span>
+                            <span><strong>完整試香指南：</strong>附贈香氣演變記錄卡與場合搭配建議。</span>
+                        </li>
+                    </ul>
+
+                    <div class="discovery-price-box">
+                        <span class="old-price">NT$ 1,200</span>
+                        <span class="new-price">NT$ 680</span>
+                        <span class="tag-free-ship">全台免運費</span>
+                    </div>
+
+                    <a href="#" class="btn btn-primary btn-lg">立即訂製專屬試香盒</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌理念 section -->
+    <section id="about" class="section about-section">
+        <div class="container text-center max-w-700">
+            <span class="section-tag">OUR PHILOSOPHY</span>
+            <h2>香水是無形的自我介紹</h2>
+            <p>
+                我們拒絕盲目追逐流行熱門款，致力於讓每一次噴香都成為獨立靈魂的延伸。透明的調香數據、真實的持香評測與貼心的情境指南，是我們對每一位尋香者的承諾。
+            </p>
+        </div>
+    </section>
+
+    <!-- 頁尾 Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">AURA <span>PARFUM</span></a>
+                <p>專為品味人士打造的小眾香水探索與盲買避雷平台。</p>
+            </div>
+            <div class="footer-links">
+                <h4>快速連結</h4>
+                <ul>
+                    <li><a href="#scenarios">場合情境選香</a></li>
+                    <li><a href="#quiz">純 CSS 香水測驗</a></li>
+                    <li><a href="#perfumes">嚴選小眾香水</a></li>
+                    <li><a href="#discovery">試香小樣組</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>顧客服務</h4>
+                <ul>
+                    <li><a href="#">退換貨政策</a></li>
+                    <li><a href="#">持香表現測試標準</a></li>
+                    <li><a href="#">常見問題 FAQ</a></li>
+                    <li><a href="#">聯絡我們</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h4>訂閱氣味通訊</h4>
+                <p>每週收到小眾調香師故事與限定試香資訊。</p>
+                <form class="newsletter-form" action="#" method="post">
+                    <input type="email" placeholder="輸入您的 Email 地址" required>
+                    <button type="submit" class="btn btn-primary">訂閱</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 AURA PARFUM. All Rights Reserved. Pure HTML & CSS Demo.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
